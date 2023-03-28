@@ -1,0 +1,8 @@
+{
+  "slug": "explicit-query-expansion",
+  "title": "Explicit-rule query expansion",
+  "description": "Expands queries using reviewed phrase-to-alias rules with provenance, a one-hop limit, and an expansion cap. Rules match complete token sequences, not substrings. Original terms have weight 1 and expansions weight 0.5. These are editorial rules, not generated language, embeddings, or semantic equivalence guarantees.",
+  "category": "agents",
+  "demo_args": [],
+  "expected_exit": 0
+}
