@@ -1,0 +1,18 @@
+{
+  "rag": [
+    "retrieval augmented generation"
+  ],
+  "voice": [
+    "speech",
+    "audio"
+  ],
+  "llm": [
+    "large language model"
+  ],
+  "latency": [
+    "response delay"
+  ],
+  "audio": [
+    "sound"
+  ]
+}
