@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 4 of 12. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 5 of 12. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -16,7 +16,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 2 | 2023-07-15T14:22:21+05:30 | Add synthetic input fixtures and reference data (present) |
 | 3 | 2024-02-25T11:58:17+05:30 | Implement tokens (present) |
 | 4 | 2024-03-19T12:15:41+05:30 | Implement expand (present) |
-| 5 | 2024-04-10T10:31:12+05:30 | Expose the command-line demonstration and input handling (later stage) |
+| 5 | 2024-04-10T10:31:12+05:30 | Expose the command-line demonstration and input handling (present) |
 | 6 | 2024-09-28T18:04:30+05:30 | Test one hop and provenance (later stage) |
 | 7 | 2025-02-11T18:19:10+05:30 | Test whole token and multiword rules (later stage) |
 | 8 | 2025-04-20T14:32:11+05:30 | Test cap dedup and determinism (later stage) |

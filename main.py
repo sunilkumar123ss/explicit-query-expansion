@@ -33,3 +33,15 @@ def expand(query,rules,limit=8):
     return {"query":query,"original":[{"term":term,"weight":1.0} for term in original],
             "expansions":additions,"strategy":"reviewed lexical rules; one hop"}
 
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("query",nargs="?",default="voice RAG latency")
+    parser.add_argument("--rules",type=Path,default=Path(__file__).with_name("rules.json"))
+    parser.add_argument("--limit",type=int,default=8)
+    args=parser.parse_args()
+    try:result=expand(args.query,json.loads(args.rules.read_text()),args.limit)
+    except (ValueError,OSError,TypeError) as exc:parser.error(str(exc))
+    print(json.dumps(result,indent=2))
+
+if __name__ == "__main__":main()
