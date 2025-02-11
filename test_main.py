@@ -14,4 +14,7 @@ class ExpansionTests(unittest.TestCase):
     def test_one_hop_and_provenance(self):
         result=expand("voice",{"voice":["audio"],"audio":["sound"]})
         self.assertEqual(result["expansions"],[{"term":"audio","weight":0.5,"rule":"voice"}])
+    def test_whole_token_and_multiword_rules(self):
+        self.assertEqual(expand("drag",{"rag":["retrieval"]})["expansions"],[])
+        self.assertEqual(expand("vector store",{"vector store":["index"]})["expansions"][0]["term"],"index")
 
