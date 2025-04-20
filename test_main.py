@@ -17,4 +17,8 @@ class ExpansionTests(unittest.TestCase):
     def test_whole_token_and_multiword_rules(self):
         self.assertEqual(expand("drag",{"rag":["retrieval"]})["expansions"],[])
         self.assertEqual(expand("vector store",{"vector store":["index"]})["expansions"][0]["term"],"index")
+    def test_cap_dedup_and_determinism(self):
+        result=expand("voice",{"voice":["audio","audio","speech"]},limit=1)
+        self.assertEqual(len(result["expansions"]),1)
+        self.assertEqual(result,expand("voice",{"voice":["audio","audio","speech"]},limit=1))
 
