@@ -21,4 +21,9 @@ class ExpansionTests(unittest.TestCase):
         result=expand("voice",{"voice":["audio","audio","speech"]},limit=1)
         self.assertEqual(len(result["expansions"]),1)
         self.assertEqual(result,expand("voice",{"voice":["audio","audio","speech"]},limit=1))
+    def test_bad_rules_and_limit_fail(self):
+        with self.assertRaises(ValueError):expand("x",{"x":"not a list"})
+        with self.assertRaises(ValueError):expand("x",{"X":["a"],"x":["b"]})
+        with self.assertRaises(ValueError):expand("x",{},limit=-1)
 
+if __name__ == "__main__":unittest.main()
